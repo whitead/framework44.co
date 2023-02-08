@@ -1,0 +1,79 @@
+@import 'npm:@picocss/pico/css/pico.min.css';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+
+:root {
+    --spacing-company: 3rem;
+    --font-weight: 400;
+    --border-radius: 0;
+    --background-color: #232323
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+/* Typography */
+h2,
+h3,
+hgroup> :last-child {
+    font-weight: 200;
+}
+
+h1 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+}
+
+
+/* Header */
+small {
+    color: var(--muted-color);
+}
+
+/* Header */
+.hero {
+    background-color: #394046;
+    background-image: url("img/header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--white-color);
+    padding: var(--spacing-company) 0;
+
+}
+
+header {
+    padding: var(--spacing-company) 0;
+}
+
+header hgroup> :last-child {
+    color: var(--h3-color);
+}
+
+header hgroup {
+    margin-bottom: var(--spacing-company);
+}
+
+/* Styling for prompt like interface */
+
+
+
+terminal {
+    background-color: var(--background-color);
+    color: var(--white-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 800px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    text-align: left;
+}
+
+.terminal-container {
+    background-color: var(--background-color);
+    height: 100vh;
+}
+
+/* Styling for footer */
