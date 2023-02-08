@@ -5,7 +5,7 @@
     --spacing-company: 3rem;
     --font-weight: 400;
     --border-radius: 0;
-    --background-color: #232323
+    --background-color: #232323;
 }
 
 body {
@@ -74,6 +74,12 @@ terminal {
 .terminal-container {
     background-color: var(--background-color);
     height: 100vh;
+    margin: 0 auto;
 }
 
 /* Styling for footer */
+
+footer {
+    background-color: var(--background-color);
+    padding: var(--spacing-company) 0;
+}

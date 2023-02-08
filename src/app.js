@@ -4,15 +4,20 @@ function typeOutMessage(targetElementId, message, minTypingInterval, maxTypingIn
     let innerHTML = "";
 
     function type() {
+        let timeout = minTypingInterval;
         if (currentIndex < message.length) {
             if (message.charAt(currentIndex) === "\r\n" || message.charAt(currentIndex) === "\n") {
-                innerHTML += "\n[root@localhost]";
+                innerHTML += "\n";
+                currentIndex++;
+                timeout = Math.random() * (maxTypingInterval - minTypingInterval) + minTypingInterval;
+            } else if (innerHTML.endsWith("\n")) {
+                innerHTML += "[root@framework44] ";
             } else {
                 innerHTML += message.charAt(currentIndex);
+                currentIndex++;
             }
-            targetElement.innerHTML = innerHTML + "▂";
-            currentIndex++;
-            setTimeout(type, Math.random() * (maxTypingInterval - minTypingInterval) + minTypingInterval);
+            targetElement.innerHTML = innerHTML + "_";
+            setTimeout(type, timeout);
         }
     }
 
@@ -41,5 +46,5 @@ Welcome to Framework44!
 
 // when page is ready (no jquery)
 document.addEventListener("DOMContentLoaded", function (event) {
-    typeOutMessage("terminal", message, 50, 100);
+    typeOutMessage("terminal", message, 100, 2000);
 });
