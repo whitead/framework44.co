@@ -58,17 +58,14 @@ header hgroup {
 
 
 
-terminal {
+#terminal {
     background-color: var(--background-color);
     color: var(--white-color);
     border-radius: var(--border-radius);
-    padding: 1rem;
-    margin: 1rem 0;
-    width: 100%;
-    max-width: 800px;
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 500;
     text-align: left;
+    overflow-x: hidden;
 }
 
 .terminal-container {
